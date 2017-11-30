@@ -1,0 +1,105 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  color: #666666;
+}
+div.row{
+  margin-top: 45px;
+  .col-sm-9,.col-sm-3{
+    padding: 0;
+  }
+}
+#sb-editor-grids {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+
+  //h1, h2, h3 {
+  //  font-weight: normal;
+  //}
+  //
+  //h1 {
+  //  font-size: 20px;
+  //
+  //  > i {
+  //    margin-right: 15px;
+  //  }
+  //}
+  //
+  //h2 {
+  //  font-size: 15px;
+  //}
+  //
+  //header {
+  //  display: flex;
+  //  justify-content: space-between;
+  //  align-items: center;
+  //  padding: 0 15px;
+  //}
+
+  // Grid
+  .grid {
+    border: 1px solid rgba(204, 204, 204, 1);
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+
+    // Left panel styles
+    &.left {
+      //display: none;
+    }
+
+    // Right Panel Styles
+    &.right {
+      width: 100%;
+    }
+
+    // Active Panel
+    &.active {
+      display: block;
+    }
+
+    //Top Panel Styles
+    &.top {
+      height: 48px;
+    }
+
+    // Bottom Panel Styles
+    &.bottom {
+      height: calc(~"100% - 48px");
+      border-top: none;
+      transform-style: preserve-3d;
+    }
+
+    // Top left panel styles
+    &.top.left {
+      header {
+        padding: 0 30px 0 20px;
+      }
+    }
+
+    // Top right panel styles
+    &.top.right {
+      //h2 {
+      //  color: #666;
+      //  overflow: hidden;
+      //  padding-right: 5px;
+      //  text-overflow: ellipsis;
+      //  white-space: nowrap;
+      //}
+    }
+
+  }
+}
+
+.grid.bottom.right,.grid.bottom.left{
+  overflow-y: auto;
+}
