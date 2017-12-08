@@ -1,0 +1,135 @@
+<div class="modal fade" id="propertiesModal" role="dialog" tabindex="-1" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Properties</h4>
+      </div>
+      <div class="modal-body">
+        <div class="copy">
+          <form skiphistory="" action="" mask="" transition="fadein" feedback="" method="POST" base-confirm="message:Unsaved changes will be lost are you sure you want to continue ?">
+            <section class="accordion-section">
+
+              <input type="checkbox" name="properties-panel" class="accordion-input" id="accordion-properties" checked="checked">
+              <label class="accordion-heading" for="accordion-properties">Attributes</label>
+              <div class="config-properties accordion-properties disabled">
+                <div template="propertyConfigFieldset" model="subject.content.form.fieldsets.properties"><fieldset>
+                  <legend if="legend">Edit Properties</legend>
+                  <div each="fields" template=""><label class="  " data-type="input">
+                    <span>Name</span>
+                    <input type="text" data-which-field="displayName" name="content[displayName]" value="Home Page | GM US English | &quot;Merchandise&quot;" maxlength="">
+                    <!---->
+                    <!---->
+                    <!---->
+                  </label><!--^_^--><input type="hidden" name="content[defaultTitle]" value="title"><!--^_^--><input type="hidden" name="content[defaultTitleHref]" value="view/template/cc7c37cf-e95a-4614-997e-730f42e38095"><!--^_^--><input type="hidden" name="content[defaultCopy]" value="copy"><!--^_^--><input type="hidden" name="content[defaultCopyHref]" value="view/template/b3e2fa78-082e-426e-b827-d7efce86a2f6"><!--^_^--><input type="hidden" name="content[defaultMedia]" value="contentMedia"><!--^_^--><input type="hidden" name="content[defaultMediaHref]" value="view/template/c387c1e0-fb97-44df-a2e2-47c840a842cb"><!--^_^--><label class=" " data-type="select">
+                    <span if="label">Title</span>
+                    <select name="content[title]" data-which-field="title" fieldtype="">
+                      <option value="view/template/497be908-feac-464b-b59e-f99b1dc2afd2" repeat="values">none</option>
+                      <option value="view/template/2b4e060d-b82e-4a92-a1b9-c512d4850554" repeat="values">Title + Subtitle</option>
+                      <option value="view/template/cc7c37cf-e95a-4614-997e-730f42e38095" selected="" repeat="values">title</option>
+                    </select>
+                    <!---->
+                    <!---->
+                  </label><!--^_^--><label class=" " data-type="select">
+                    <span if="label">Copy</span>
+                    <select name="content[copy]" data-which-field="copy" fieldtype="">
+                      <option value="view/template/b3e2fa78-082e-426e-b827-d7efce86a2f6" selected="" repeat="values">copy</option>
+                      <option value="view/template/497be908-feac-464b-b59e-f99b1dc2afd2" repeat="values">none</option>
+                    </select>
+                    <!---->
+                    <!---->
+                  </label><!--^_^--><label class=" " data-type="select">
+                    <span if="label">Media</span>
+                    <select name="content[media]" data-which-field="media" fieldtype="">
+                      <option value="view/template/c387c1e0-fb97-44df-a2e2-47c840a842cb" selected="" repeat="values">Content + Media</option>
+                      <option value="view/template/70974c98-3565-405d-b7ee-a76e03f3e0c3" repeat="values">Content + Video</option>
+                      <option value="view/template/497be908-feac-464b-b59e-f99b1dc2afd2" repeat="values">none</option>
+                    </select>
+                    <!---->
+                    <!---->
+                  </label><!--^_^--><input type="hidden" name="content[id]" value="view/card/e0ee2f9f-edb9-46cd-833a-1a6b3ddb3402"><!--^_^--><label class=" " data-type="select">
+                    <span if="label">Media Category</span>
+                    <select name="content[mediaCategory]" data-which-field="mediacategory" fieldtype="">
+                      <option value="none" repeat="values">None</option>
+                    </select>
+                    <!---->
+                    <!---->
+                  </label><!--^_^--></div>
+                </fieldset></div>
+
+                <!-- primary link  -->
+                <fieldset if="isCardUnderEdit">
+                  <label>
+                    <span>Primary Link</span>
+                    <span class="help-text">Link(s) to be displayed in the Primary links area of this card</span>
+
+                  </label><div class="config-hyperlink">
+                  <ul if="subject.content.cards.hyperlinks" each="subject.content.cards.hyperlinks" sb-sortable="fieldSelector:[orderfield];"></ul>
+                </div>
+                  <a id="addLink" transition="fadein" class="" data-checkdirty="" skiphistory="" data-event="selectlink" href="route/base-view/linkSelectorModal?updateProperty=hyperlinks&amp;m_skiphistory=true&amp;m_update=parent&amp;m_close=true&amp;configCtx=%7B%22webId%22%3A%22gmps-vandergriff%22%2C%22version%22%3A%22WIP%22%2C%22locale%22%3A%22en_US%22%2C%22page%22%3A%22HomePage%22%7D&amp;parentCardId=undefined&amp;selectedId=view%2Fcard%2Fe0ee2f9f-edb9-46cd-833a-1a6b3ddb3402&amp;selectedName=HomePage-Merchandise&amp;section=true&amp;modalManager=true&amp;redirectTo=pageOutlineConfigurator">Add Link</a>
+
+                </fieldset>
+
+                <!-- Secondary link -->
+                <fieldset if="isCardUnderEdit">
+                  <label>
+                    <span>Secondary Link</span>
+                    <span class="help-text">Link(s) to be displayed in the Secondary links area of this card</span>
+
+                  </label><div class="config-hyperlink">
+                  <ul if="subject.content.cards.secondaryHyperlinks" each="subject.content.cards.secondaryHyperlinks" sb-sortable="fieldSelector:[orderfield];"></ul>
+                </div>
+                  <a id="addLink" transition="fadein" class="" data-checkdirty="" skiphistory="" data-event="selectlink" href="route/base-view/linkSelectorModal?updateProperty=secondaryHyperlinks&amp;m_skiphistory=true&amp;m_update=parent&amp;m_close=true&amp;configCtx=%7B%22webId%22%3A%22gmps-vandergriff%22%2C%22version%22%3A%22WIP%22%2C%22locale%22%3A%22en_US%22%2C%22page%22%3A%22HomePage%22%7D&amp;parentCardId=undefined&amp;selectedId=view%2Fcard%2Fe0ee2f9f-edb9-46cd-833a-1a6b3ddb3402&amp;selectedName=HomePage-Merchandise&amp;section=true&amp;modalManager=true&amp;redirectTo=pageOutlineConfigurator">Add Link</a>
+
+                </fieldset>
+
+
+                <!-- Tertiary link -->
+                <fieldset if="isCardUnderEdit">
+                  <label>
+                    <span>Tertiary Link</span>
+                    <span class="help-text">Link(s) to be displayed in the Tertiary links area of this card</span>
+
+                  </label><div class="config-hyperlink">
+                  <ul if="subject.content.cards.tertiaryHyperlinks" each="subject.content.cards.tertiaryHyperlinks" sb-sortable="fieldSelector:[orderfield];"></ul>
+                </div>
+                  <a id="addLink" transition="fadein" class="" data-checkdirty="" skiphistory="" data-event="selectlink" href="route/base-view/linkSelectorModal?updateProperty=tertiaryHyperlinks&amp;m_skiphistory=true&amp;m_update=parent&amp;m_close=true&amp;configCtx=%7B%22webId%22%3A%22gmps-vandergriff%22%2C%22version%22%3A%22WIP%22%2C%22locale%22%3A%22en_US%22%2C%22page%22%3A%22HomePage%22%7D&amp;parentCardId=undefined&amp;selectedId=view%2Fcard%2Fe0ee2f9f-edb9-46cd-833a-1a6b3ddb3402&amp;selectedName=HomePage-Merchandise&amp;section=true&amp;modalManager=true&amp;redirectTo=pageOutlineConfigurator">Add Link</a>
+
+                </fieldset>
+
+
+                <div base-link-selector="" base-dialog="">
+                  <section>
+                    <fieldset>
+                      <label model="subject.content.form.fieldsets.linkSelector.fields[0]">
+                        <span><input type="radio" name="rel" value="internal" checked="checked"> Link to internal page</span>
+                        <select type="text" name="internal">
+                          <!---->
+                        </select>
+                      </label>
+
+                      <label>
+                        <span><input type="radio" name="rel" value="external"> Link to a external source</span>
+                        <input type="text" name="external" value="http://">
+                      </label>
+
+                      <button class="btn btn-primary" data-event="link">Add Link</button>
+                      <button data-event="cancel">Cancel</button>
+                    </fieldset>
+                  </section>
+                </div>
+              </div>
+            </section>
+            <div class="actions fixed-bottom">
+              <button type="submit" class="button btn-primary" name="saveButton">Done</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
