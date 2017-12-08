@@ -8,26 +8,23 @@
         </i>
       </span>
       <div class="link">
-        <a class="show" title="replace" target="_parent" skiphistory href="#"><i class="material-icons">find_replace</i>
+        <a class="show" title="replace" target="_parent" skiphistory href="#" data-toggle="modal" data-target="#myModal"><i class="material-icons">find_replace</i>
           <span>replace</span>
         </a>
-        <a skiphistory title="content" href="#"><i class="material-icons">filter_none</i>
-          <span>content</span>
-        </a>
-        <a  skiphistory title="properties" href="#"><i class="material-icons">tune</i>
+        <a  skiphistory title="properties" href="#" data-toggle="modal" data-target="#propertiesModal"><i class="material-icons">tune</i>
           <span>Properties</span>
         </a>
-        <a  skiphistory title="style" href="#"><i class="material-icons">colorize</i>
+        <a  skiphistory title="style" href="#" data-toggle="modal" data-target="#stylesModal"><i class="material-icons">colorize</i>
           <span>style</span>
         </a>
-        <a  skiphistory title="admin" href="#"><i class="material-icons">supervisor_account</i>
+        <a  skiphistory title="admin" href="#" data-toggle="modal" data-target="#adminModal"><i class="material-icons">supervisor_account</i>
           <span>admin</span>
         </a>
 
-        <a class="cta-addCard" skiphistory title="add" href="#"><i class="material-icons">add_box</i>
+        <a class="cta-addCard" skiphistory title="add" href="#" data-toggle="modal" data-target="#myModal"><i class="material-icons">add_box</i>
           <span>add</span>
         </a>
-        <a skiphistory transition="fadein" title="delete" target="_parent" href="#"><i class="icon icon-remove"></i>
+        <a skiphistory transition="fadein" title="delete" target="_parent" href="#" data-toggle="modal" data-target="#myModal"><i class="icon icon-remove"></i>
           <span>delete</span>
         </a>
       </div>
@@ -174,3 +171,6 @@
     </div>
   </div>
 </div>
+<properties></properties>
+<app-styles></app-styles>
+<app-admin></app-admin>
